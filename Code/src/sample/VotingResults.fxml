@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="896.0" maxWidth="1160.0" minHeight="590.0" minWidth="823.0" prefHeight="879.0" prefWidth="1160.0" style="-fx-background-color: #02042a; -fx-border-color: black; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.votingResultController">
+    <children>
+        <ImageView fitHeight="921.0" fitWidth="1221.0" layoutX="-24.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="-37.0">
+            <image>
+                <Image url="@backgroun1.jpg" />
+            </image>
+        </ImageView>
+        <AnchorPane layoutX="17.0" layoutY="17.0" prefHeight="851.0" prefWidth="1126.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="14.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000a3" height="851.0" layoutX="-1.0" stroke="#4d181800" strokeType="INSIDE" width="1125.0" />
+                <Text fill="WHITE" layoutX="404.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Results " wrappingWidth="350.403377532959">
+                    <font>
+                        <Font name="Georgia" size="44.0" />
+                    </font>
+                </Text>
+                <TableView fx:id="votingTB" layoutX="42.0" layoutY="154.0" prefHeight="659.0" prefWidth="1035.0">
+                    <columns>
+                        <TableColumn fx:id="votingTBNo" prefWidth="193.86665725708008" text="Election No" />
+                        <TableColumn fx:id="votingTBName" minWidth="0.0" prefWidth="261.3333435058594" text="Name" />
+                  <TableColumn fx:id="votesTB" prefWidth="150.66656494140625" text="Votes" />
+                        <TableColumn fx:id="votingTBVote" minWidth="0.0" prefWidth="431.73333740234375" text="Voting" />
+                    </columns>
+               <stylesheets>
+                  <URL value="@viewcss.css" />
+                  <URL value="@resultcss.css" />
+               </stylesheets>
+                </TableView>
+                <Button layoutX="44.0" layoutY="82.0" mnemonicParsing="false" onAction="#VotingResults" prefHeight="60.0" prefWidth="1034.0" style="-fx-background-color: #12bed5;" text="Load Results" textFill="WHITE">
+                    <font>
+                        <Font name="Georgia Bold" size="32.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="600.0" maxWidth="825.0" minHeight="600.0" minWidth="825.0" prefHeight="600.0" prefWidth="825.0" style="-fx-background-color: #02042a; -fx-border-color: black; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.adminOptionsCandidateController">
+   <children>
+      <ImageView fitHeight="736.0" fitWidth="825.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@backgroun1.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="277.0" layoutY="43.0" prefHeight="525.0" prefWidth="511.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="274.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000a4" height="519.0" layoutX="-1.0" stroke="#4d181800" strokeType="INSIDE" width="511.0" />
+            <Text fill="WHITE" layoutX="120.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Candidates" wrappingWidth="287.470027923584">
+               <font>
+                  <Font name="Georgia" size="42.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnadd" layoutX="30.0" layoutY="93.0" mnemonicParsing="false" onAction="#addCan" prefHeight="48.0" prefWidth="460.0" style="-fx-background-color: #12bed5;" text="ADD" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="93.0">
+               <font>
+                  <Font name="Georgia Bold" size="26.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnedit" layoutX="32.0" layoutY="166.0" mnemonicParsing="false" onAction="#editCan" prefHeight="48.0" prefWidth="460.0" style="-fx-background-color: #12bed5;" text="EDIT" textFill="WHITE" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="166.0">
+               <font>
+                  <Font name="Georgia Bold" size="26.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnview" layoutX="30.0" layoutY="241.0" mnemonicParsing="false" onAction="#viewCan" prefHeight="48.0" prefWidth="460.0" style="-fx-background-color: #12bed5;" text="VIEW" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="241.0">
+               <font>
+                  <Font name="Georgia Bold" size="26.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btndelete" layoutX="30.0" layoutY="316.0" mnemonicParsing="false" onAction="#deleteCan" prefHeight="48.0" prefWidth="460.0" style="-fx-background-color: #12bed5;" text="DELETE" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="316.0">
+               <font>
+                  <Font name="Georgia Bold" size="26.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Line endX="857.0" endY="423.64996337890625" layoutX="-347.0" layoutY="-24.0" startX="346.6000061035156" startY="423.64996337890625" stroke="WHITE" strokeWidth="2.0" />
+            <Button fx:id="btnadd1" layoutX="25.0" layoutY="430.0" mnemonicParsing="false" onAction="#voting" prefHeight="48.0" prefWidth="460.0" style="-fx-background-color: #e7e7e7; -fx-background-radius: 20;" text="Control Voting">
+               <font>
+                  <Font name="Georgia Bold" size="30.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="600.0" prefWidth="226.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000d7" height="600.0" layoutX="-1.0" stroke="TRANSPARENT" strokeType="INSIDE" width="226.0" />
+            <Line endX="225.99998474121094" endY="52.45000457763672" layoutY="4.0" startX="3.051757857974735E-6" startY="52.45000457763672" stroke="#12bed5" />
+            <Hyperlink layoutX="32.0" layoutY="112.0" prefHeight="23.0" prefWidth="163.0" text="- Candidates" textFill="#43a738">
+               <font>
+                  <Font name="Georgia" size="24.0" />
+               </font>
+            </Hyperlink>
+            <Text fill="WHITE" layoutX="8.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Options :">
+               <font>
+                  <Font name="Georgia" size="27.0" />
+               </font>
+            </Text>
+            <Hyperlink fx:id="hypVoters" layoutX="33.0" layoutY="148.0" onAction="#Voters" prefHeight="23.0" prefWidth="163.0" text="- Voters" textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="24.0" />
+               </font>
+            </Hyperlink>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000047" height="80.0" layoutX="-1.0" layoutY="520.0" stroke="TRANSPARENT" strokeType="INSIDE" width="226.0" />
+            <Label layoutX="7.0" layoutY="9.0" text="Menu" textFill="#12bed5">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="Hbacktologin" layoutX="14.0" layoutY="542.0" onMouseClicked="#backToLogin" prefHeight="42.0" prefWidth="191.0" text="&lt;- Back to login">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="896.0" maxWidth="1906.0" minHeight="590.0" minWidth="1906.0" prefHeight="873.0" prefWidth="1906.0" style="-fx-background-color: #02042a; -fx-border-color: black; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DeleteCandidate">
+    <children>
+        <ImageView fitHeight="1427.0" fitWidth="1922.0" layoutX="8.599999999999909" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="-2.0">
+            <image>
+                <Image url="@backgroun1.jpg" />
+            </image>
+        </ImageView>
+        <AnchorPane layoutX="252.0" layoutY="20.0" prefHeight="825.0" prefWidth="1631.0" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="249.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="17.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000a3" height="842.0" layoutX="-1.0" stroke="#4d181800" strokeType="INSIDE" width="1638.0" />
+                <Text fill="WHITE" layoutX="634.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Delete Candidates" wrappingWidth="350.403377532959">
+                    <font>
+                        <Font name="Georgia" size="42.0" />
+                    </font>
+                </Text>
+                <Button fx:id="bntloadData" layoutX="7.0" layoutY="70.0" mnemonicParsing="false" onAction="#loadDataTable" prefHeight="48.0" prefWidth="1616.0" style="-fx-background-color: #12bed5;" text="Load Data" textFill="WHITE" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="70.0">
+                    <font>
+                        <Font name="Georgia Bold" size="26.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <TableView fx:id="cantable" editable="true" layoutX="11.0" layoutY="139.0" prefHeight="605.0" prefWidth="1612.0" stylesheets="@viewcss.css">
+                    <columns>
+                        <TableColumn fx:id="PRID" prefWidth="41.5999755859375" resizable="false" text="ID" />
+                        <TableColumn fx:id="PRname" prefWidth="225.60000610351562" resizable="false" text="Name" />
+                        <TableColumn fx:id="PRNIC" prefWidth="153.5999755859375" resizable="false" text="NIC" />
+                        <TableColumn fx:id="PRTel" minWidth="0.0" prefWidth="193.5999755859375" resizable="false" text="Tel. No." />
+                        <TableColumn fx:id="PRemail" minWidth="0.0" prefWidth="172.7999267578125" resizable="false" text="Email" />
+                        <TableColumn fx:id="PRaddress" minWidth="0.0" prefWidth="116.800048828125" resizable="false" text="Address" />
+                        <TableColumn fx:id="PRstreet" prefWidth="140.0" resizable="false" text="Street" />
+                        <TableColumn fx:id="PRcity" prefWidth="145.5999755859375" resizable="false" text="City" />
+                        <TableColumn fx:id="PRstate" prefWidth="145.599853515625" resizable="false" text="State" />
+                        <TableColumn fx:id="PRpostcode" prefWidth="106.39990234375" resizable="false" text="Postcode" />
+                        <TableColumn fx:id="PRDOB" prefWidth="174.4000244140625" resizable="false" text="DOB" />
+                        <TableColumn fx:id="PRcitizen" minWidth="7.2000732421875" prefWidth="111.2000732421875" resizable="false" text="Citizenship" />
+                        <TableColumn fx:id="partyName" prefWidth="212.7999267578125" resizable="false" text="Name(P)" />
+                        <TableColumn fx:id="Partycolor" prefWidth="143.199951171875" resizable="false" text="Color(P)" />
+                        <TableColumn fx:id="PartyNumber" prefWidth="115.2001953125" resizable="false" text="Number(P)" />
+                        <TableColumn fx:id="PartySymbole" minWidth="4.800048828125" prefWidth="116.800048828125" resizable="false" text="Symbole(P)" />
+                        <TableColumn fx:id="PartyDeposit" minWidth="0.0" prefWidth="90.400146484375" text="Deposit" />
+                    </columns>
+                </TableView>
+            <Button fx:id="bntDelete" layoutX="12.0" layoutY="756.0" mnemonicParsing="false" onAction="#deleteSelectedRow" prefHeight="48.0" prefWidth="1611.0" style="-fx-background-color: #12bed5;" text="Delete selected Candidate" textFill="WHITE">
+               <font>
+                  <Font name="Georgia Bold" size="28.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="7.0" layoutY="-4.0" prefHeight="891.0" prefWidth="227.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="1675.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000d7" height="900.0" layoutX="-6.0" layoutY="-11.0" stroke="TRANSPARENT" strokeType="INSIDE" width="232.0" />
+                <Line endX="225.99998474121094" endY="52.45000457763672" layoutY="21.0" startX="3.051757857974735E-6" startY="52.45000457763672" stroke="#12bed5" strokeWidth="3.0" />
+                <Hyperlink layoutX="12.0" layoutY="146.0" onAction="#adminOptions" prefHeight="43.0" prefWidth="186.0" text="Candidates" textFill="WHITE">
+                    <font>
+                        <Font name="Georgia" size="27.0" />
+                    </font>
+                </Hyperlink>
+                <Text fill="WHITE" layoutX="8.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Options :">
+                    <font>
+                        <Font name="Georgia" size="31.0" />
+                    </font>
+                </Text>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000047" height="100.0" layoutX="-4.0" layoutY="794.0" stroke="TRANSPARENT" strokeType="INSIDE" width="232.0" />
+                <Label layoutX="7.0" layoutY="7.0" text="Menu" textFill="#12bed5">
+                    <font>
+                        <Font size="42.0" />
+                    </font>
+                </Label>
+                <Hyperlink fx:id="backLogin" layoutX="4.0" layoutY="812.0" onAction="#backToLogin" prefHeight="71.0" prefWidth="227.0" text="&lt;- Back to login">
+                    <font>
+                        <Font size="26.0" />
+                    </font>
+                </Hyperlink>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000047" height="200.0" layoutX="-4.0" layoutY="193.0" stroke="TRANSPARENT" strokeType="INSIDE" width="232.0" />
+                <Hyperlink contentDisplay="CENTER" layoutX="45.0" layoutY="202.0" onAction="#addCan" prefHeight="46.0" prefWidth="106.0" style="-fx-text-alignment: center;" text="- ADD" textAlignment="CENTER" textFill="#43a738">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Hyperlink>
+                <Hyperlink contentDisplay="CENTER" layoutX="46.0" layoutY="241.0" onAction="#editCan" prefHeight="46.0" prefWidth="106.0" style="-fx-text-alignment: center;" text="- EDIT" textAlignment="CENTER" textFill="#43a738">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Hyperlink>
+                <Hyperlink contentDisplay="CENTER" layoutX="46.0" layoutY="282.0" onAction="#viewCan" prefHeight="46.0" prefWidth="106.0" style="-fx-text-alignment: center;" text="- VIEW" textAlignment="CENTER" textFill="#43a738">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Hyperlink>
+                <Hyperlink contentDisplay="CENTER" layoutX="45.0" layoutY="325.0" prefHeight="46.0" prefWidth="122.0" style="-fx-text-alignment: center;" text="- DELETE" textAlignment="CENTER" textFill="#85cd7d">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Hyperlink>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

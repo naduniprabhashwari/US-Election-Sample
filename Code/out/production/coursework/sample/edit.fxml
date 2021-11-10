@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="896.0" maxWidth="1160.0" minHeight="590.0" minWidth="823.0" prefHeight="879.0" prefWidth="1160.0" style="-fx-background-color: #02042a; -fx-border-color: black; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EditCandidate">
+    <children>
+        <ImageView fitHeight="907.0" fitWidth="1229.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="-49.3333740234375">
+            <image>
+                <Image url="@backgroun1.jpg" />
+            </image>
+        </ImageView>
+        <AnchorPane layoutX="262.0" layoutY="11.0" prefHeight="863.0" prefWidth="887.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="259.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="8.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000a3" height="863.0" layoutX="-1.0" layoutY="-1.0" stroke="#4d181800" strokeType="INSIDE" width="881.0" />
+                <Text fill="WHITE" layoutX="268.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Update Candidates" wrappingWidth="373.86999130249023">
+                    <font>
+                        <Font name="Georgia" size="42.0" />
+                    </font>
+                </Text>
+                <Button fx:id="bntUpdate" layoutX="26.0" layoutY="798.0" mnemonicParsing="false" onAction="#updateData" prefHeight="48.0" prefWidth="839.0" style="-fx-background-color: #12bed5;" text="Update" textFill="WHITE" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="798.0">
+                    <font>
+                        <Font name="Georgia Bold" size="26.0" />
+                    </font>
+                </Button>
+                <GridPane layoutX="42.0" layoutY="75.0" prefHeight="68.0" prefWidth="803.0" style="-fx-border-color: black; -fx-background-color: rgba(0,0 , 0, 0.5);" AnchorPane.bottomAnchor="714.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="75.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="384.53326416015625" minWidth="10.0" prefWidth="237.40003662109376" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="548.800048828125" minWidth="10.0" prefWidth="543.1999633789062" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Text fill="#00e1ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Candidate ID">
+                            <font>
+                                <Font name="Garamond Bold" size="33.0" />
+                            </font>
+                        </Text>
+                  <ComboBox fx:id="ComboCandidate" prefHeight="63.0" prefWidth="268.0" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="280.0" />
+                     </GridPane.margin></ComboBox>
+                  <Button fx:id="bntsearch" mnemonicParsing="false" onAction="#showcandidateIDs" prefHeight="63.0" prefWidth="549.0" style="-fx-background-color: #03b10c;" text="Search Candidate's IDs" textFill="WHITE" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Button>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" right="10.0" />
+                    </padding>
+                </GridPane>
+                
+            <GridPane fx:id="gridPanePersonal" alignment="CENTER" layoutX="39.0" layoutY="222.0" prefHeight="567.0" prefWidth="804.0" style="-fx-background-color: rgba(0,0 , 0, 0.5);" visible="false">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="390.26666259765625" minWidth="10.0" prefWidth="227.86671142578126" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="710.0000366210936" minWidth="10.0" prefWidth="462.13337402343757" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="710.0000366210936" minWidth="10.0" prefWidth="114.6666259765625" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding>
+               <children>
+                  <Text fill="#00e1ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                     <font>
+                        <Font name="Garamond Bold" size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#00e1ff" strokeType="OUTSIDE" strokeWidth="0.0" text="NIC" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Garamond Bold" size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#00e1ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Garamond Bold" size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#00e1ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Telephone No." GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Garamond Bold" size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#00e1ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Postcode" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="Garamond Bold" size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#00e1ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Address No." GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Garamond Bold" size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#00e1ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Street" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Garamond Bold" size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#00e1ff" strokeType="OUTSIDE" strokeWidth="0.0" text="City" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Garamond Bold" size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#00e1ff" strokeType="OUTSIDE" strokeWidth="0.0" text="State" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="Garamond Bold" size="26.0" />
+                     </font>
+                  </Text>
+                  <TextField prefHeight="48.0" prefWidth="343.0" promptText="ex -: White" style="-fx-background-color: None; -fx-border-color: white; -fx-border-width: 2;-fx-text-inner-color: white;-fx-prompt-text-fill: #989898;" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <TextField prefHeight="48.0" prefWidth="343.0" promptText="ex -: White" style="-fx-background-color: None; -fx-border-color: white; -fx-border-width: 2;-fx-text-inner-color: white;-fx-prompt-text-fill: #989898;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField prefHeight="48.0" prefWidth="343.0" promptText="ex -: White" style="-fx-background-color: None; -fx-border-color: white; -fx-border-width: 2;-fx-text-inner-color: white;-fx-prompt-text-fill: #989898;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField prefHeight="95.0" prefWidth="601.0" promptText="ex -: White" style="-fx-background-color: None; -fx-border-color: white; -fx-border-width: 2;-fx-text-inner-color: white;-fx-prompt-text-fill: #989898;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField prefHeight="48.0" prefWidth="343.0" promptText="ex -: White" style="-fx-background-color: None; -fx-border-color: white; -fx-border-width: 2;-fx-text-inner-color: white;-fx-prompt-text-fill: #989898;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField prefHeight="48.0" prefWidth="343.0" promptText="ex -: White" style="-fx-background-color: None; -fx-border-color: white; -fx-border-width: 2;-fx-text-inner-color: white;-fx-prompt-text-fill: #989898;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField prefHeight="48.0" prefWidth="343.0" promptText="ex -: White" style="-fx-background-color: None; -fx-border-color: white; -fx-border-width: 2;-fx-text-inner-color: white;-fx-prompt-text-fill: #989898;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField prefHeight="48.0" prefWidth="343.0" promptText="ex -: White" style="-fx-background-color: None; -fx-border-color: white; -fx-border-width: 2;-fx-text-inner-color: white;-fx-prompt-text-fill: #989898;" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField prefHeight="58.0" prefWidth="354.0" promptText="ex -: White" style="-fx-background-color: None; -fx-border-color: white; -fx-border-width: 2;-fx-text-inner-color: white;-fx-prompt-text-fill: #989898;" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="83.0" text="*" textFill="RED" visible="false" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="83.0" text="*" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="83.0" text="*" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="83.0" text="*" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="83.0" text="*" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="83.0" text="*" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="83.0" text="*" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="83.0" text="*" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="83.0" text="*" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane fx:id="gridPaneParty" alignment="CENTER" layoutX="39.0" layoutY="223.0" prefHeight="567.0" prefWidth="803.0" style="-fx-background-color: rgba(0,0 , 0, 0.5);" visible="false">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="390.26666259765625" minWidth="10.0" prefWidth="211.8" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="710.0000366210936" minWidth="10.0" prefWidth="495.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="710.0000366210936" minWidth="10.0" prefWidth="114.6666259765625" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding>
+               <children>
+                  <Text fill="#00e1ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                     <font>
+                        <Font name="Garamond Bold" size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#00e1ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Color" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Garamond Bold" size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#00e1ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Number" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Garamond Bold" size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#00e1ff" strokeType="OUTSIDE" strokeWidth="0.0" text="Symbole" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Garamond Bold" size="26.0" />
+                     </font>
+                  </Text>
+                  <TextField prefHeight="58.0" prefWidth="596.0" promptText="ex -: White" style="-fx-background-color: None; -fx-border-color: white; -fx-border-width: 2;-fx-text-inner-color: white;-fx-prompt-text-fill: #989898;" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField prefHeight="58.0" prefWidth="596.0" promptText="ex -: White" style="-fx-background-color: None; -fx-border-color: white; -fx-border-width: 2;-fx-text-inner-color: white;-fx-prompt-text-fill: #989898;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField prefHeight="58.0" prefWidth="596.0" promptText="ex -: White" style="-fx-background-color: None; -fx-border-color: white; -fx-border-width: 2;-fx-text-inner-color: white;-fx-prompt-text-fill: #989898;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField prefHeight="58.0" prefWidth="596.0" promptText="ex -: White" style="-fx-background-color: None; -fx-border-color: white; -fx-border-width: 2;-fx-text-inner-color: white;-fx-prompt-text-fill: #989898;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="83.0" text="*" textFill="RED" visible="false" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="65.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="83.0" text="*" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="65.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="83.0" text="*" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="65.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="83.0" text="*" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="65.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane layoutX="42.0" layoutY="149.0" prefHeight="68.0" prefWidth="803.0" style="-fx-border-color: black; -fx-background-color: rgba(0,0 , 0, 0.5);">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="384.53326416015625" minWidth="10.0" prefWidth="237.6000244140625" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="550.7999267578125" minWidth="10.0" prefWidth="543.9999755859375" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text fill="#00e1ff" strokeType="OUTSIDE" strokeWidth="0.0" text=" Fields to update">
+                     <font>
+                        <Font name="Garamond Bold" size="33.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="ComboField" prefHeight="64.0" prefWidth="257.0" promptText="Personal data or Party data" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <Button fx:id="bntloaddata" mnemonicParsing="false" onAction="#sublisting" prefHeight="63.0" prefWidth="276.0" style="-fx-background-color: #03b10c;" text="Load Data for ID" textFill="WHITE" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="270.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </GridPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="3.0" prefHeight="880.0" prefWidth="234.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="926.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000d7" height="887.0" layoutX="-3.0" stroke="TRANSPARENT" strokeType="INSIDE" width="232.0" />
+                <Line endX="225.99998474121094" endY="52.45000457763672" layoutY="21.0" startX="3.051757857974735E-6" startY="52.45000457763672" stroke="#12bed5" strokeWidth="3.0" />
+                <Hyperlink layoutX="12.0" layoutY="146.0" onAction="#adminOptions" prefHeight="43.0" prefWidth="186.0" text="Candidates" textFill="WHITE">
+                    <font>
+                        <Font name="Georgia" size="27.0" />
+                    </font>
+                </Hyperlink>
+                <Text fill="WHITE" layoutX="8.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Options :">
+                    <font>
+                        <Font name="Georgia" size="31.0" />
+                    </font>
+                </Text>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000047" height="86.0" layoutX="-4.0" layoutY="801.0" stroke="TRANSPARENT" strokeType="INSIDE" width="232.0" />
+                <Label layoutX="7.0" layoutY="7.0" text="Menu" textFill="#12bed5">
+                    <font>
+                        <Font size="42.0" />
+                    </font>
+                </Label>
+                <Hyperlink fx:id="backLogin" layoutX="4.0" layoutY="812.0" onAction="#backToLogin" prefHeight="50.0" prefWidth="227.0" text="&lt;- Back to login">
+                    <font>
+                        <Font size="26.0" />
+                    </font>
+                </Hyperlink>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000047" height="200.0" layoutX="-4.0" layoutY="193.0" stroke="TRANSPARENT" strokeType="INSIDE" width="232.0" />
+                <Hyperlink contentDisplay="CENTER" layoutX="45.0" layoutY="202.0" onAction="#addCan" prefHeight="46.0" prefWidth="106.0" style="-fx-text-alignment: center;" text="- ADD" textAlignment="CENTER" textFill="#43a738">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Hyperlink>
+                <Hyperlink contentDisplay="CENTER" layoutX="46.0" layoutY="241.0" onAction="#viewCan" prefHeight="46.0" prefWidth="106.0" style="-fx-text-alignment: center;" text="- EDIT" textAlignment="CENTER" textFill="#85cd7d">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Hyperlink>
+                <Hyperlink contentDisplay="CENTER" layoutX="46.0" layoutY="282.0" onAction="#viewCan" prefHeight="46.0" prefWidth="106.0" style="-fx-text-alignment: center;" text="- VIEW" textAlignment="CENTER" textFill="#43a738">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Hyperlink>
+                <Hyperlink contentDisplay="CENTER" layoutX="45.0" layoutY="325.0" onAction="#deleteCan" prefHeight="46.0" prefWidth="122.0" style="-fx-text-alignment: center;" text="- DELETE" textAlignment="CENTER" textFill="#43a738">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Hyperlink>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
